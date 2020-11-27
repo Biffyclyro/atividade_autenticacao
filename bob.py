@@ -9,7 +9,6 @@ with socket.socket() as ss:
     
     with conn:
         print('{} connectou!'.format(addr))
-        data = conn.recv()    
-        print(len(data))
+        data = conn.recv(1024)    
         print('recebeu {}'.format(data.decode('UTF-8')))
 
